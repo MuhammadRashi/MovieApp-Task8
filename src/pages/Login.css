@@ -1,0 +1,33 @@
+.loginclass{
+    height: 50px;
+    width: 300px;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.singn-in-head{
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+
+.button-class{
+    width: 300px;
+    height: 50px;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+    border-radius: 6px;
+}
+.singn-up{
+    margin-top: 230px;
+    font-size: 15px;
+    color: white;
+}

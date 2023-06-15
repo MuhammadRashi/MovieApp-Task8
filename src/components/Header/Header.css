@@ -1,0 +1,46 @@
+.header-container-dark {
+
+  padding: 10px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+}
+.header-container-light {
+
+  padding: 10px;
+  background-color: var(--backround-light);
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.button-container {
+  margin-left: 3px;
+  
+  
+}
+.btn-theme-dark {
+  padding: 10px;
+  height: 75px;
+  width: 75px;
+  filter: invert(1);
+  /* background-color: black; */
+  /* invert(1); */
+}
+.btn-theme-light {
+  padding: 10px;
+  height: 75px;
+  width: 75px;
+  /* filter: invert(1); */
+  /* background-color: black; */
+  /* invert(1); */
+}
+
+.btn-logout-dark {
+  padding: 10px;
+  /* filter: invert(1); */
+}
+.btn-logout-light {
+  padding: 10px;
+   filter: invert(1);
+}

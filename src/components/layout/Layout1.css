@@ -1,0 +1,30 @@
+.login {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* background-color: white; */
+    background: url("https://assets.nflxext.com/ffe/siteui/vlv3/efb4855d-e702-43e5-9997-bba0154152e0/42f6dd08-d478-46e4-a4a8-e3a93aa7e085/IN-en-20230417-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+    /* background: url("https://img.freepik.com/free-photo/movie-background-collage_23-2149876003.jpg"); */
+  }
+  .overlay-dark{
+
+    width: 550px;
+    height: 650px;
+    margin: 50px;
+    background-color: rgb(13, 12, 12);
+    border-radius: 6px;
+    opacity: 0.8
+  }
+
+  .overlay-light{
+    
+    width: 550px;
+    height: 650px;
+    margin: 50px;
+    background-color: rgb(141, 135, 135);
+    border-radius: 6px;
+    opacity: 0.8
+  }
+
