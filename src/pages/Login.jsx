@@ -11,7 +11,7 @@ import { ButtonLabel } from "../components/ButtonLabel/ButtonLabel";
 import { AuthContext } from "../context/AuthContext";
 // import Signin from "../components/Signin/Signin";
 import { useNavigate,Navigate,useParams } from 'react-router-dom';
-
+import { Link } from "react-router-dom";
 export default function Login() {
   const params=useParams()
  const navigate=useNavigate();
@@ -65,18 +65,23 @@ export default function Login() {
         onchange={handleChange}
         
         />
-        <Input type="text"
+        <Input type="Password"
         name={"password"}
-        placeholder="user adadaf"
+        placeholder="Password"
         id="id"
         classname="loginclass"
         onchange={handleChange}
         />
 
         <ButtonLabel buttonText={"Sign in"} buttonClass={"button-class"}/>
+        <Link to={'/Forgot'}>
+        <LabelText HeadingText={"Forgot Password"} headingClass="forgot-password" />
+        </Link>
         </form>
-        <LabelText HeadingText={"New to CinemaSpot Sign Up Now"} headingClass="singn-up" />
-        {/* New to CinemaSpot? Sign Up Now */}
+        <Link to={'/Signup'} >
+
+        <LabelText HeadingText={"Sign Up Now"} headingClass="singn-up" />
+        </Link>
       </Layout1>
       <Footer />
     </Fragment>

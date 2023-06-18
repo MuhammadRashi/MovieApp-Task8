@@ -1,6 +1,6 @@
 // import icon2 from "./Vector.png";
 
-import './Home.css'
+import "./Home.css";
 
 import { Fragment, useContext, useEffect, useState } from "react";
 import Footer from "../components/Footer/Footer";
@@ -10,39 +10,39 @@ import SearchBox from "../components/inputBox/SearchBox";
 import useHandleChange from "../hooks/useHandleChange";
 import useHandleMovie from "../hooks/useHandleMovie";
 import { useDebounce } from "../hooks/useDebounce";
-import { ThemeContext } from '../context/ThemeContext';
+import { ThemeContext } from "../context/ThemeContext";
 
 export default function Home() {
-  const {searchInputValue, setSearchInputValue} = useHandleChange("");
-  const {getSearchMovie,getMovies}=useHandleMovie();
-  const {mode}=useContext(ThemeContext)
-  
-  useDebounce(searchInputValue,
-    searchInputValue ==""? getMovies(): getSearchMovie);
-    const handleChange=(event)=>{
+  const { searchInputValue, setSearchInputValue } = useHandleChange("");
+  const { getSearchMovie, getMovies } = useHandleMovie();
+  const { mode } = useContext(ThemeContext);
+
+  useDebounce(
+    searchInputValue,
+    searchInputValue == "" ? getMovies() : getSearchMovie
+  );
+  const handleChange = (event) => {
     setSearchInputValue(event);
     getSearchMovie(searchInputValue);
-  }
+  };
 
-  useEffect(()=>{
+  useEffect(() => {
     // document.body.classList.add("my-body-dark")
-    if(mode){
+    if (mode) {
       document.body.classList.remove("my-body-light");
       document.body.classList.add("my-body-dark");
-    }else{
+    } else {
       document.body.classList.remove("my-body-dark");
       document.body.classList.add("my-body-light");
     }
     // {mode ? document.body.classList.add("my-body-dark") : document.body.classList.add("my-body-light") }
     // console.log(mode,"home mode.....");
     //  document.body.classList.add({mode ? "my-body-dark" : "my-body-dark" });
-    
-  },[mode])
+  }, [mode]);
   // useEffect(()=>{
 
-  //     {searchInputValue=="" ? getMovies(): 
-      
-      
+  //     {searchInputValue=="" ? getMovies():
+
   //     getSearchMovie(searchInputValue)};
   //     // const timeout = setTimeout(() => {
   //     //   getSearchMovie(searchInputValue);
@@ -71,8 +71,8 @@ export default function Home() {
   return (
     <Fragment>
       <Header />
-      <SearchBox handleChange={handleChange}/>
-      <MovieList/>
+      <SearchBox handleChange={handleChange} />
+      <MovieList />
       <Footer />
     </Fragment>
   );

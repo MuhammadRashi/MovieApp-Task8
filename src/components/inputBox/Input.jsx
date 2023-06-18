@@ -2,7 +2,7 @@
 const Input = ({
   type,
   name,
-  palaceholder,
+  placeholder,
   id,
   classname,
   onchange
@@ -14,13 +14,14 @@ const Input = ({
     <div>
       <input 
         type={type}
+        placeholder={placeholder}
         name={name}
-        placeholder={palaceholder}
         id={id}
         className={classname}
         onChange={onchange}
       />
     </div>
+    
   );
 };
 
